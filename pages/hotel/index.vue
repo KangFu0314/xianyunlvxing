@@ -1,5 +1,5 @@
 <template>
-  <div>post</div>
+  <div>hotel</div>
 </template>
 
 <script>
