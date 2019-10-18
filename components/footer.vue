@@ -59,20 +59,17 @@ export default {};
   color: #ccc;
   min-width: 1000px;
 }
-
 .footer {
   padding-top: 30px;
   margin: 0 auto;
   width: 1000px;
 }
-
 .info-list {
   h5 {
     font-weight: normal;
     font-size: 16px;
     margin-bottom: 10px;
   }
-
   p {
     font-size: 12px;
     line-height: 1.8;
@@ -81,18 +78,14 @@ export default {};
     }
   }
 }
-
 .scan {
   text-align: center;
-
   img {
     width: 140px;
     height: 140px;
   }
-
   font-size: 12px;
 }
-
 .licence {
   border-top: 1px #666 solid;
   margin-top: 20px;

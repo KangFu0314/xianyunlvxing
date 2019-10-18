@@ -7,7 +7,7 @@ export default {
    ** Headers of the page
    */
   head: {
-    title: "闲云旅游网", // 修改title
+    title: "世界上最大的旅游网站", // 修改title
     meta: [{
         charset: 'utf-8'
       },
