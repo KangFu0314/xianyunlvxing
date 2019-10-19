@@ -25,7 +25,7 @@
         <nuxt-link
           to="/user/login"
           class="account-link"
-          v-if="!store.state.user.userInfo.token"
+          v-if="!$store.state.user.userInfo.token"
         >登录 / 注册</nuxt-link>
         <el-dropdown v-else>
           <span class="el-dropdown-link">
@@ -38,7 +38,9 @@
           </span>
           <el-dropdown-menu slot="dropdown">
             <el-dropdown-item>个人中心</el-dropdown-item>
-            <el-dropdown-item>退出</el-dropdown-item>
+            <el-dropdown-item>
+              <span @click="handleLogout">退出</span>
+            </el-dropdown-item>
           </el-dropdown-menu>
         </el-dropdown>
       </el-row>
@@ -49,7 +51,9 @@
 export default {
   methods: {
     // 用户退出
-    handleLogout() {}
+    handleLogout() {
+      this.$store.commit("user/setUserInfo", {});
+    }
   }
 };
 </script>

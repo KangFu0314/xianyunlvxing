@@ -40,17 +40,18 @@ export default {
       this.$refs.form.validate(async valid => {
         // valid是表单验证的结果
         if (valid) {
-          // 提交登录接口
-          var res = await this.$axios({
-            url: "/accounts/login",
-            method: "POST",
-            data: this.form
-          });
+          // // 提交登录接口
+          // var res = await this.$axios({
+          //   url: "/accounts/login",
+          //   method: "POST",
+          //   data: this.form
+          // this.$store.dispath用于调运action的方法
+          const res = await this.$store.dispatch("user/login", this.form);
           if (res.status === 200) {
             this.$message.success("登录成功");
-            // this.$router.push("/");
-            const data = res.data;
-            this.$store.commit("user/setUserInfo", data);
+            // const data = res.data;
+            // this.$store.commit("user/setUserInfo", data);
+            this.$router.push("/");
           }
         }
       });
